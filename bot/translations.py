@@ -5,7 +5,6 @@ class Messages:
     )
 
     HELP_MSG = [
-        ".",
         "/authorise ",
     ]
 
