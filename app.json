@@ -1,11 +1,11 @@
 {
   "name": "Youtube Upload Bot",
   "description": "Telegram to YouTube Uploader Bot",
-  "repository": "https://github.com/odysseusmax/utube",
-  "logo": "https://github.com/odysseusmax/utube/blob/master/ss/logo.jpeg",
+  "repository": "https://github.com/kefiraaa/klever",
+  "logo": "http://klimenko.fun/youtube/favicon.ico",
   "keywords": ["telegram", "youtube", "uploader"],
   "env": {
-      "BOT_TOKEN": {
+    "BOT_TOKEN": {
       "description": "Your Bot token. Get from https://t.me/botfather",
       "value": ""
     },
@@ -69,10 +69,10 @@
       "value": "",
       "required":false
     }
-   },
-   "buildpacks": [
+  },
+  "buildpacks": [
     {
-      "url": "heroku/python"
+      "url": "klever/python"
     }
   ]
 }
