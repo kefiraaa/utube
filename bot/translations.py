@@ -7,8 +7,11 @@ class Messages:
 
     HELP_MSG = [
         ".",
-        "**Step 1:** `/authorise copied-code` and "
-        "send it.\n\n**",
+        ""
+        "****\n\n**Step 1:**"
+        "**Now lets authorise.**\n\nYou need to give me the access to upload videos to your Youtube account.For that "
+        "open the given link and allow access and copy the code. Come back here and type `/authorise copied-code` and "
+        "send it.\n\n",
     ]
 
     NOT_A_REPLY_MSG = "Please reply to some video file."
