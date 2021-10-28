@@ -1,5 +1,12 @@
 class Messages:
 
+    HELP_MSG = [
+        ".",
+        "**Now lets authorise.**\n\nYou need to give me the access to upload videos to your Youtube account.For that "
+        "open the given link and allow access and copy the code. Come back here and type `/authorise copied-code` and "
+        "send it.",
+    ]
+
     NOT_A_REPLY_MSG = "Please reply to some video file."
 
     NOT_A_MEDIA_MSG = "No media file found. " + NOT_A_REPLY_MSG
