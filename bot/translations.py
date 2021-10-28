@@ -5,7 +5,8 @@ class Messages:
     )
 
     HELP_MSG = [
-        "/authorise ",
+        "/authorise .",
+        "write",
     ]
 
     NOT_A_REPLY_MSG = "Please reply to some video file."
