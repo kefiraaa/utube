@@ -15,7 +15,7 @@ log = logging.getLogger(__name__)
 @UtubeBot.on_message(
     Filters.private
     & Filters.incoming
-    & Filters.command("a")
+    & Filters.command("1")
     & Filters.user(Config.AUTH_USERS)
 )
 async def _auth(c: UtubeBot, m: Message) -> None:
@@ -41,8 +41,7 @@ async def _auth(c: UtubeBot, m: Message) -> None:
 
         msg2 = await msg.reply_text(cred_data, parse_mode=None)
         await msg2.reply_text(
-            "Это ваши данные авторизации! Сохраните это для последующего использования. Нажмите /save_auth_data "
-            "данные для повторной авторизации. ",
+            "Это ваши данные авторизации! Сохраните их для последующего использования. Нажмите /save_auth_data ",
             True,
         )
 

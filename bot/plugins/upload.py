@@ -24,7 +24,7 @@ log = logging.getLogger(__name__)
 @UtubeBot.on_message(
     Filters.private
     & Filters.incoming
-    & Filters.command("u")
+    & Filters.command("2")
     & Filters.user(Config.AUTH_USERS)
 )
 async def _upload(c: UtubeBot, m: Message):
