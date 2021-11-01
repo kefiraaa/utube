@@ -92,32 +92,32 @@ class YouTube:
                     else:
                         self.response = None
                         raise UploadFailed(
-                            "The file upload failed with an unexpected response:{}".format(
+                            "Загрузка файла завершилась неудачно с неожиданным ответом: {}".format(
                                 response
                             )
                         )
             except errors.HttpError as e:
                 if e.resp.status in self.RETRIABLE_STATUS_CODES:
-                    self.error = "A retriable HTTP error {} occurred:\n {}".format(
+                    self.error = "Извлекаемая ошибка HTTP {} произошло:\n {}".format(
                         e.resp.status, e.content
                     )
                 else:
                     raise
             except self.RETRIABLE_EXCEPTIONS as e:
-                self.error = "A retriable error occurred: {}".format(e)
+                self.error = "Произошла ошибка, которую можно повторить: {}".format(e)
 
             if self.error is not None:
                 log.debug(self.error)
                 self.retry += 1
 
                 if self.retry > self.MAX_RETRIES:
-                    raise MaxRetryExceeded("No longer attempting to retry.")
+                    raise MaxRetryExceeded("Больше не пытайтесь повторить попытку. ")
 
                 max_sleep = 2 ** self.retry
                 sleep_seconds = random.random() * max_sleep
 
                 log.debug(
-                    "Sleeping {} seconds and then retrying...".format(sleep_seconds)
+                    "Спим {} секунды, а затем повторная попытка...".format(sleep_seconds)
                 )
                 time.sleep(sleep_seconds)
 

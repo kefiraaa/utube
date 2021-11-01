@@ -24,7 +24,7 @@ log = logging.getLogger(__name__)
 @UtubeBot.on_message(
     Filters.private
     & Filters.incoming
-    & Filters.command("upload")
+    & Filters.command("u")
     & Filters.user(Config.AUTH_USERS)
 )
 async def _upload(c: UtubeBot, m: Message):
@@ -66,7 +66,7 @@ async def _upload(c: UtubeBot, m: Message):
         return
 
     try:
-        await snt.edit_text("Downloaded to local, Now starting to upload to youtube...")
+        await snt.edit_text("Загружено локально, теперь начинается загрузка на YouTube... ")
     except Exception as e:
         log.warning(e, exc_info=True)
         pass
@@ -138,12 +138,12 @@ async def progress(
             eta = datetime.timedelta(seconds=int(((tot - cur) / (1024 * 1024)) / speed))
             elapsed = datetime.timedelta(seconds=diff)
             progress = round((cur * 100) / tot, 2)
-            text = f"{status}\n\n{progress}% done.\n{curr} of {tott}\nSpeed: {speed} {unit}PS"
+            text = f"{status}\n\n{progress}% сделано.\n{curr} of {tott}\nСкорость: {speed} {unit}PS"
             f"\nETA: {eta}\nElapsed: {elapsed}"
             await snt.edit_text(
                 text=text,
                 reply_markup=InlineKeyboardMarkup(
-                    [[InlineKeyboardButton("Cancel!", f"cncl+{download_id}")]]
+                    [[InlineKeyboardButton("Отменить! ", f"cncl+{download_id}")]]
                 ),
             )
 

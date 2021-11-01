@@ -56,14 +56,14 @@ class GoogleAuth:
                     self.API_SERVICE_NAME, self.API_VERSION, http=http
                 )
             else:
-                raise InvalidCredentials("No credentials!")
+                raise InvalidCredentials("Никаких учетных данных! ")
         except Exception:
             raise
 
     def LoadCredentialsFile(self, cred_file: str) -> None:
         if not os.path.isfile(cred_file):
             raise NoCredentialFile(
-                "No credential file named {} is found.".format(cred_file)
+                "Нет файла учетных данных с именем {} найден. ".format(cred_file)
             )
         storage = Storage(cred_file)
         self.credentials = storage.get()
