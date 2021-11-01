@@ -7,11 +7,10 @@ class Messages:
     HELP_MSG = [
         ".",
         "**Давай узнаем, как я работаю. **\n\n**Шаг 1:** __Вы разрешаете мне загружать видео на ваш канал YouTube. "
-        "**Шаг 2:** __Вы пересылаете мне любое видео в Telegram.__\n\n**Шаг 3:** __Чтобы его загрузить тебе необходимо написать комманду "
-        "__/upload __to the forwarded video file.You can also specify some title in the upload command, but its "
-        "optional though.Title will follow the __`/upload`.__If no title is given, filename will be used as title.__"
-        "\n\n**Step 4:** __I remotely download the file and uploads to your Youtube channel.__\n\n**Step 5:** __I "
-        "send you the Youtube link after upload.__",
+        "\n\n**Шаг 2:** __Вы присылаете мне любое видео в Telegram.__\n\n**Шаг 3:** __Чтобы его загрузить тебе необходимо ответить на видео и написать комманду "
+        "__/upload "
+        "\n\n**Шаг 4:** __Я удаленно скачиваю видео и загружаю его на ваш канал Youtube.__\n\n**Шаг 5:** __Я "
+        "отправлю тебе ссылку на загруженный видеоролик.__",
         "**Create your youtube channel**\n\nThere is no point in using me if you dont have a Youtube Channel.So go "
         "through the given steps to create one.\n\n**Step 1:** __Sign in to YouTube on a computer or using the mobile."
         "__\n\n**Step 2:** __Try any action that requires a channel, such as uploading a video, posting a comment, "
