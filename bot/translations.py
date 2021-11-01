@@ -6,10 +6,7 @@ class Messages:
 
     HELP_MSG = [
         ".",
-        "Hi there.\n\nFirst things first. You should be aware that youtube processes each and every video uploaded, "
-        "and its AI is amazing that it flags the video for copyrights if it finds copywrited content as soon as its "
-        "uploaded, and you will not be able to publish the video.\n\nRead through all the pages to know how I work.",
-        "**Lets learn how I work.**\n\n**Step 1:** __You authorise me to upload to your youtube channel.More about "
+        "**Давай узнаем, как я работаю. **\n\n**Шаг 1:** __Вы разрешаете мне загружать на ваш канал YouTube. "
         "this in comming pages.__\n\n**Step 2:** __You forward any Telegram video to me.__\n\n**Step 3:** __You reply "
         "__/upload __to the forwarded video file.You can also specify some title in the upload command, but its "
         "optional though.Title will follow the __`/upload`.__If no title is given, filename will be used as title.__"
