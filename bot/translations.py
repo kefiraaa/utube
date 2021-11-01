@@ -11,30 +11,28 @@ class Messages:
         "__/upload "
         "\n\n**Шаг 4:** __Я удаленно скачиваю видео и загружаю его на ваш канал Youtube.__\n\n**Шаг 5:** __Я "
         "отправлю тебе ссылку на загруженный видеоролик.__",
-        "**Now lets authorise.**\n\nYou need to give me the access to upload videos to your Youtube account.For that "
-        "open the given link and allow access and copy the code. Come back here and type `/authorise copied-code` and "
-        "send it.\n\n**Fear not!**\nI'm not a hacker or someone who wants to creep into people's privacy. I respect "
-        "one's privacy. I'm here just to help anyone who wants help. If I was a hacker I won't be sitting here "
-        "writing Telegram Bots.",
+        "**Давай перейдём к авторзиации.**\n\nВы должны предоставить мне доступ для загрузки видео в свой аккаунт Youtube. "
+        "нажмите на кнопку 'Авторизация' либо скопируйте ссылку и перейдите по ней ."
+        "Далее разрешите доступ и скопируйте код. Вернись сюда и напечатай `/authorise 'и ваш код' ",
     ]
 
-    NOT_A_REPLY_MSG = "Please reply to some video file."
+    NOT_A_REPLY_MSG = "Пожалуйста, ответьте на какой-нибудь видеофайл. "
 
-    NOT_A_MEDIA_MSG = "No media file found. " + NOT_A_REPLY_MSG
+    NOT_A_MEDIA_MSG = "Медиа-файл не найден. " + NOT_A_REPLY_MSG
 
-    NOT_A_VALID_MEDIA_MSG = "This is not a valid media"
+    NOT_A_VALID_MEDIA_MSG = "Не верный формат файла. "
 
-    DAILY_QOUTA_REACHED = "Looks like you are trying to upload more than 6 videos today! By default youtube only "
-    "allows about 6 uploads daily, so this request might fail!!"
+    DAILY_QOUTA_REACHED = "Похоже, сегодня вы пытаетесь загрузить более 6 видео! По умолчанию YouTube "
+    "позволяет загрузить около 6 загрузок в день. "
 
-    PROCESSING = "Processing....."
+    PROCESSING = "Обработка..... "
 
-    NOT_AUTHENTICATED_MSG = "You have not authenticated me to upload video to any account. see /help to authenticate"
+    NOT_AUTHENTICATED_MSG = "Вы не аутентифицировали меня для загрузки видео в какую-либо учетную запись. напишите /help "
 
-    NO_AUTH_CODE_MSG = "There is no code. Please provide some code"
+    NO_AUTH_CODE_MSG = "Кода нет. Пожалуйста, предоставьте код "
 
-    AUTH_SUCCESS_MSG = "Congrats, you have successfully authenticated me to upload to Youtube.\nHappy uploading!"
+    AUTH_SUCCESS_MSG = "Поздравляем, вы успешно аутентифицировали канал для загрузки на Youtube. \nУдачной загрузки! "
 
-    AUTH_FAILED_MSG = "Authentication failed\nDetails:{}"
+    AUTH_FAILED_MSG = "Ошибка аутентификации \nДетали :{}"
 
-    AUTH_DATA_SAVE_SUCCESS = "Successfully saved the given auth data!"
+    AUTH_DATA_SAVE_SUCCESS = "Данные авторизации успешно сохранены! "
