@@ -6,8 +6,8 @@ class Messages:
 
     HELP_MSG = [
         ".",
-        "**Давай узнаем, как я работаю. **\n\n**Шаг 1:** __Вы разрешаете мне загружать на ваш канал YouTube. "
-        "this in comming pages.__\n\n**Step 2:** __You forward any Telegram video to me.__\n\n**Step 3:** __You reply "
+        "**Давай узнаем, как я работаю. **\n\n**Шаг 1:** __Вы разрешаете мне загружать видео на ваш канал YouTube. "
+        "**Шаг 2:** __Вы пересылаете мне любое видео в Telegram.__\n\n**Шаг 3:** __Чтобы его загрузить тебе необходимо написать комманду "
         "__/upload __to the forwarded video file.You can also specify some title in the upload command, but its "
         "optional though.Title will follow the __`/upload`.__If no title is given, filename will be used as title.__"
         "\n\n**Step 4:** __I remotely download the file and uploads to your Youtube channel.__\n\n**Step 5:** __I "
