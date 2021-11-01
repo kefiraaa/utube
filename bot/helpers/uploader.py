@@ -48,9 +48,9 @@ class Uploader:
             auth = GoogleAuth(Config.CLIENT_ID, Config.CLIENT_SECRET)
 
             if not os.path.isfile(Config.CRED_FILE):
-                log.debug(f"{Config.CRED_FILE} does not exist")
+                log.debug(f"{Config.CRED_FILE} не существует ")
                 self.status = False
-                self.message = "Upload failed because you did not authenticate me."
+                self.message = "Загрузка не удалась, потому что вы не прошли авторизацию. "
                 return
 
             auth.LoadCredentialsFile(Config.CRED_FILE)
@@ -83,7 +83,7 @@ class Uploader:
                 privacyStatus=privacyStatus,
             )
 
-            log.debug(f"payload for {self.file} : {properties}")
+            log.debug(f"полезная нагрузка для {self.file} : {properties}")
 
             youtube = YouTube(google)
             r = await loop.run_in_executor(
@@ -95,10 +95,10 @@ class Uploader:
             video_id = r["id"]
             self.status = True
             self.message = (
-                f"[{title}](https://youtu.be/{video_id}) uploaded to YouTube under category "
+                f"[{title}](https://youtu.be/{video_id}) загружено на YouTube в категорию "
                 f"{categoryId} ({categoryName})"
             )
         except Exception as e:
             log.error(e, exc_info=True)
             self.status = False
-            self.message = f"Error occuered during upload.\nError details: {e}"
+            self.message = f"Произошла ошибка во время загрузки.\nСведения об ошибке: {e}"
