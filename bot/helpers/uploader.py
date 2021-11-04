@@ -69,7 +69,7 @@ class Uploader:
             )
             description = (
                 Config.VIDEO_DESCRIPTION
-                + "\n©Klever 2021"
+                + "\n"
             )[:5000]
             if not Config.UPLOAD_MODE:
                 privacyStatus = "private"
@@ -95,7 +95,7 @@ class Uploader:
             video_id = r["id"]
             self.status = True
             self.message = (
-                f"[{title}](https://youtu.be/{video_id}) загружено на YouTube в категорию "
+                f"[{title}](https://youtube.com/watch?v={video_id}) загружено на YouTube в категорию "
                 f"{categoryId} ({categoryName})"
             )
         except Exception as e:

@@ -22,8 +22,7 @@ class Messages:
 
     NOT_A_VALID_MEDIA_MSG = "Не верный формат файла. "
 
-    DAILY_QOUTA_REACHED = "Похоже, сегодня вы пытаетесь загрузить более 6 видео! По умолчанию YouTube "
-    "позволяет загрузить около 6 загрузок в день. "
+    DAILY_QOUTA_REACHED = "Да ты крут xD "
 
     PROCESSING = "Обработка..... "
 
