@@ -16,8 +16,8 @@ class Uploader:
         self.file = file
         self.title = title
         self.video_namelist = {
-            "fdsfdsfsdfdsfdsfdsf",
-            "22sdfdsfdsfewrw434",
+            '''tesr123''',
+            '''123123213''',
         }
         
         self.video_category = {
