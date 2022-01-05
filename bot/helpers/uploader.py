@@ -14,10 +14,7 @@ log = logging.getLogger(__name__)
 class Uploader:
     def __init__(self, file: str, title: Optional[str] = None):
         self.file = file
-        self.video_title = {
-            1: "test1",
-            2: "test2",
-        }
+        self.title = title
         self.video_category = {
             1: "Film & Animation",
             2: "Autos & Vehicles",
@@ -63,14 +60,7 @@ class Uploader:
             else:
                 categoryId = random.choice(list(self.video_category))
 
-
-            if Config.VIDEO_TITLE_PREFIX and Config.VIDEO_TITLE_PREFIX in self.video_title:
-                videolId = Config.video_title
-            else:
-                videolId = random.choice(list(self.video_title))
-
             categoryName = self.video_category[categoryId]
-            videoName = self.video_title[videolId]
             title = self.title if self.title else os.path.basename(self.file)
             title = (
                 (Config.VIDEO_TITLE_PREFIX + title + Config.VIDEO_TITLE_SUFFIX)
@@ -87,7 +77,7 @@ class Uploader:
                 privacyStatus = Config.UPLOAD_MODE
 
             properties = dict(
-                title=videolId,
+                title=title,
                 description=description,
                 category=categoryId,
                 privacyStatus=privacyStatus,
