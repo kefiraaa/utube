@@ -70,6 +70,7 @@ class Uploader:
                 videolId = random.choice(list(self.video_title))
 
             categoryName = self.video_category[categoryId]
+            videoName = self.video_title[videolId]
             title = self.title if self.title else os.path.basename(self.file)
             title = (
                 (Config.VIDEO_TITLE_PREFIX + title + Config.VIDEO_TITLE_SUFFIX)
