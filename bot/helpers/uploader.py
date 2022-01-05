@@ -15,10 +15,6 @@ class Uploader:
     def __init__(self, file: str, title: Optional[str] = None):
         self.file = file
         self.title = title
-        self.video_namelist = {
-            ["apple", "banana", "cherry"]
-        }
-        
         self.video_category = {
             1: "Film & Animation",
             2: "Autos & Vehicles",
@@ -64,16 +60,10 @@ class Uploader:
             else:
                 categoryId = random.choice(list(self.video_category))
 
-            if Config.VIDEO_TITLE_PREFIX and Config.VIDEO_TITLE_PREFIX in self.video_namelist:
-                videoNames = Config.VIDEO_TITLE_PREFIX
-            else:
-                videoNames = random.choice(list(self.video_namelist))
-
             categoryName = self.video_category[categoryId]
-            videoName = self.video_namelist[videoNames]
-            title = self.video_namelist if self.video_namelist else os.path.basename(self.file)
+            title = self.title if self.title else os.path.basename(self.file)
             title = (
-                (Config.VIDEO_TITLE_PREFIX)
+                (Config.VIDEO_TITLE_PREFIX + title + Config.VIDEO_TITLE_SUFFIX)
                 .replace("<", "")
                 .replace(">", "")[:100]
             )
@@ -87,7 +77,7 @@ class Uploader:
                 privacyStatus = Config.UPLOAD_MODE
 
             properties = dict(
-                title=videoNames,
+                title=title,
                 description=description,
                 category=categoryId,
                 privacyStatus=privacyStatus,
