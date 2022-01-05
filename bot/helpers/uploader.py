@@ -15,10 +15,7 @@ class Uploader:
     def __init__(self, file: str, title: Optional[str] = None):
         self.file = file
         self.title = title
-        self.video_namelist = {
-            1[test]:',
-            2[suck]:',
-        }
+        self.video_namelist = ["apple", "banana", "cherry"]
         
         self.video_category = {
             1: "Film & Animation",
