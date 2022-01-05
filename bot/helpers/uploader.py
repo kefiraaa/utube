@@ -64,11 +64,12 @@ class Uploader:
                 categoryId = random.choice(list(self.video_category))
 
             categoryName = self.video_category[categoryId]
-            if Config.VIDEO_TITLE and Config.VIDEO_TITLE in self.video_title:
-                videolId = Config.VIDEO_TITLE
-            else:
-                videolId = random.choice(list(self.video_title))
-            
+            title = self.title if self.title else videoId = random.choice(list(self.video_title))
+            title = (
+                (Config.VIDEO_TITLE_PREFIX + title + Config.VIDEO_TITLE_SUFFIX)
+                .replace("<", "")
+                .replace(">", "")[:100]
+            )
             description = (
                 Config.VIDEO_DESCRIPTION
                 + "\n"
