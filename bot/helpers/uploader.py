@@ -72,12 +72,7 @@ class Uploader:
 
             categoryName = self.video_category[categoryId]
             videoName = self.video_namelist[videoNames]
-            title = self.title if self.title else os.path.basename(self.file)
-            title = (
-                (Config.VIDEO_TITLE_PREFIX)
-                .replace("<", "")
-                .replace(">", "")[:100]
-            )
+
             description = (
                 Config.VIDEO_DESCRIPTION
                 + "\n"
