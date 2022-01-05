@@ -63,8 +63,14 @@ class Uploader:
             else:
                 categoryId = random.choice(list(self.video_category))
 
+
+            if Config.VIDEO_TITLE_PREFIX and Config.VIDEO_TITLE_PREFIX in self.video_title:
+                videolId = Config.video_title
+            else:
+                videolId = random.choice(list(self.video_title))
+
             categoryName = self.video_category[categoryId]
-            title = self.title if self.title else videoId = random.choice(list(self.video_title))
+            title = self.title if self.title else os.path.basename(self.file)
             title = (
                 (Config.VIDEO_TITLE_PREFIX + title + Config.VIDEO_TITLE_SUFFIX)
                 .replace("<", "")
@@ -80,7 +86,7 @@ class Uploader:
                 privacyStatus = Config.UPLOAD_MODE
 
             properties = dict(
-                title=title,
+                title=videolId,
                 description=description,
                 category=categoryId,
                 privacyStatus=privacyStatus,
